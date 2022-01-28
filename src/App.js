@@ -1,23 +1,22 @@
-import logo from './logo.svg';
+import { useState } from 'react';
 import './App.css';
 
 function App() {
+
+  const [lionSize, setLionSize] = useState(1);
+  // console.log('||', lionSize);
+  
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <section className='fight-container'>
+        <div className='lion'>
+          <p>🦁</p>
+          <div className='btn-container'>
+            <button>Lion Increases</button>
+            <button>Lion Decreases</button>
+          </div>
+        </div>
+      </section>
     </div>
   );
 }
