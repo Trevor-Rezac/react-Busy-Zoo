@@ -12,7 +12,8 @@ function App() {
   // console.log('||', 'lion size', lionSize, 'mouse size', mouseSize);
 
   const [isOpen, setIsOpen] = useState(false);
-  // console.log(isOpen);
+  const [signColor, setSignColor] = useState('red');
+  console.log('||', 'zoo is open', isOpen, 'sign color is', signColor);
 
   return (
     <div className="App">
@@ -33,10 +34,10 @@ function App() {
         </div>
       </section>
       <section className='sign-container'>
-        <Sign isOpen={isOpen} />
-        <div className='btn-container'>
-          <button className='open-btn' onClick={() => setIsOpen(true)}>Open</button>
-          <button className='closed-btn' onClick={() => setIsOpen(false)}>Closed</button>
+        <Sign isOpen={isOpen} signColor={signColor}/>
+        <div className='sign-btn-container'>
+          <button className='open-btn' onClick={() => {setIsOpen(true); setSignColor('green');}}>Open</button>
+          <button className='closed-btn' onClick={() => {setIsOpen(false); setSignColor('red');}}>Closed</button>
         </div>
       </section>
 
