@@ -35,8 +35,8 @@ function App() {
       </section>
       <section className='sign-container'>
         <Sign isOpen={isOpen} signColor={signColor}/>
-        <div className='sign-btn-container'>
-          <button className='open-btn' onClick={() => {setIsOpen(true); setSignColor('green');}}>Open</button>
+        <div className='sign-btn-container' style={ { backgroundColor: signColor } }>
+          <button className='open-btn' onClick={() => {setIsOpen(true); setSignColor('green');}} >Open</button>
           <button className='closed-btn' onClick={() => {setIsOpen(false); setSignColor('red');}}>Closed</button>
         </div>
       </section>
