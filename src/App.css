@@ -44,8 +44,9 @@ html, body, #root, .App {
 .fight-container {
   display: flex;
   flex-direction: row;
-  height: 33%;
+  height: 350px;
   width: 100%;
+  background-size: cover;
 }
 
 

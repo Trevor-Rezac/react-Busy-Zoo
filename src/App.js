@@ -1,8 +1,9 @@
 import { useState } from 'react';
 import './App.css';
+import fightBackground from './landscape.png';
 
 function App() {
-
+  console.log(fightBackground);
   const [lionSize, setLionSize] = useState(1);
   const lionStyle = { fontSize: `${lionSize}rem` };
   const [mouseSize, setMouseSize] = useState(1);
@@ -11,7 +12,7 @@ function App() {
 
   return (
     <div className="App">
-      <section className='fight-container'>
+      <section className='fight-container' style={{ backgroundImage: `url(${fightBackground})` }}>
         <div className='lion'>
           <p style={lionStyle}>🦁</p>
           <div className='btn-container'>
