@@ -4,13 +4,14 @@ import './App.css';
 function App() {
 
   const [lionSize, setLionSize] = useState(1);
+  const lionStyle = { fontSize: `${lionSize}rem` };
   console.log('||', lionSize);
 
   return (
     <div className="App">
       <section className='fight-container'>
         <div className='lion'>
-          <p>🦁</p>
+          <p style={lionStyle}>🦁</p>
           <div className='btn-container'>
             <button onClick={() => setLionSize(lionSize + 1)}>Lion Increases</button>
             <button onClick={() => setLionSize(lionSize - 1)}>Lion Decreases</button>
