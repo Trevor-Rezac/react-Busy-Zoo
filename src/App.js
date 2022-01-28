@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import './App.css';
 import fightBackground from './landscape.png';
+import Sign from './Sign.js';
 
 function App() {
   
@@ -32,10 +33,10 @@ function App() {
         </div>
       </section>
       <section className='sign-container'>
-        <div className='sign'>Open/Closed</div>
+        <Sign isOpen={isOpen} />
         <div className='btn-container'>
-          <button className='open-btn'>Open</button>
-          <button className='closed-btn'>Closed</button>
+          <button className='open-btn' onClick={() => setIsOpen(true)}>Open</button>
+          <button className='closed-btn' onClick={() => setIsOpen(false)}>Closed</button>
         </div>
       </section>
 
