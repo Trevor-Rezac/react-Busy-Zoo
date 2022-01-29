@@ -20,6 +20,10 @@ function App() {
   const [animalArr, setAnimalArr] = useState(['monkey', 'gorilla']);
   // console.log(animalArr);
 
+  function handleAddAnimal(animal) {
+    setAnimalArr([...animalArr, animal]);
+  }
+
   return (
     <div className="App">
       <section className='fight-container' style={{ backgroundImage: `url(${fightBackground})` }}>
@@ -48,15 +52,15 @@ function App() {
       <section className='zoo-container' style={{ backgroundImage: `url(${zooBackground})` }}>
         <h3>Add your favorite animals to the zoo parade!</h3>
         <div className='animal-btn-container'>
-          <button>Monkey</button>
-          <button>Gorilla</button>
-          <button>Tiger</button>
-          <button>Kangaroo</button>
-          <button>Giraffe</button>
-          <button>LLama</button>
-          <button>Elephant</button>
-          <button>Zebra</button>
-          <button>Camel</button>
+          <button onClick={() => handleAddAnimal('monkey')}>Monkey</button>
+          <button onClick={() => handleAddAnimal('gorilla')}>Gorilla</button>
+          <button onClick={() => handleAddAnimal('tiger')}>Tiger</button>
+          <button onClick={() => handleAddAnimal('kangaroo')}>Kangaroo</button>
+          <button onClick={() => handleAddAnimal('giraffe')}>Giraffe</button>
+          <button onClick={() => handleAddAnimal('llama')}>LLama</button>
+          <button onClick={() => handleAddAnimal('elephant')}>Elephant</button>
+          <button onClick={() => handleAddAnimal('zebra')}>Zebra</button>
+          <button onClick={() => handleAddAnimal('camel')}>Camel</button>
         </div>
         <Parade animalArr={animalArr}></Parade>
       </section>
