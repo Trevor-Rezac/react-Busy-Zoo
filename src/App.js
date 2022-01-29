@@ -2,6 +2,7 @@ import { useState } from 'react';
 import './App.css';
 import fightBackground from './landscape.png';
 import Sign from './Sign.js';
+import zooBackground from './zoo.jpeg';
 
 function App() {
   
@@ -13,7 +14,10 @@ function App() {
 
   const [isOpen, setIsOpen] = useState(false);
   const [signColor, setSignColor] = useState('red');
-  console.log('||', 'zoo is open', isOpen, 'sign color is', signColor);
+  // console.log('||', 'zoo is open', isOpen, 'sign color is', signColor);
+
+  const [animalArr, setAnimalArr] = useState(['monkey', 'gorilla']);
+  console.log(animalArr);
 
   return (
     <div className="App">
@@ -40,7 +44,21 @@ function App() {
           <button className='closed-btn' onClick={() => {setIsOpen(false); setSignColor('red');}}>Closed</button>
         </div>
       </section>
+      <section className='zoo-container' style={{ backgroundImage: `url(${zooBackground})` }}>
+        <h3>Add your favorite animals to the zoo parade!</h3>
+        <div className='animal-btn-container'>
+          <button>Monkey</button>
+          <button>Gorilla</button>
+          <button>Tiger</button>
+          <button>Kangaroo</button>
+          <button>Giraffe</button>
+          <button>LLama</button>
+          <button>Elephant</button>
+          <button>Zebra</button>
+          <button>Camel</button>
+        </div>
 
+      </section>
     </div>
   );
 }
