@@ -50,8 +50,8 @@ function App() {
         </div>
       </section>
       <section className='zoo-container' style={{ backgroundImage: `url(${zooBackground})` }}>
-        <h3>Add your favorite animals to the zoo parade!</h3>
         <div className='animal-btn-container'>
+          <h3>Add your favorite animals to the zoo parade!</h3>
           <button onClick={() => handleAddAnimal('monkey')}>Monkey</button>
           <button onClick={() => handleAddAnimal('gorilla')}>Gorilla</button>
           <button onClick={() => handleAddAnimal('tiger')}>Tiger</button>

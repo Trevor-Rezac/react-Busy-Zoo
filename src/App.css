@@ -73,9 +73,22 @@ p {
   height: 500px;
   width: 100%;
   background-size: cover;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+.parade {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
 }
 
 h3 {
   margin: 0 auto;
   padding: 0;
+}
+
+button {
+  margin: 5px;
 }
