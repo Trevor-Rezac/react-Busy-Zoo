@@ -3,6 +3,7 @@ import './App.css';
 import fightBackground from './landscape.png';
 import Sign from './Sign.js';
 import zooBackground from './zoo.jpeg';
+import Parade from './Parade.js';
 
 function App() {
   
@@ -17,7 +18,7 @@ function App() {
   // console.log('||', 'zoo is open', isOpen, 'sign color is', signColor);
 
   const [animalArr, setAnimalArr] = useState(['monkey', 'gorilla']);
-  console.log(animalArr);
+  // console.log(animalArr);
 
   return (
     <div className="App">
@@ -57,7 +58,7 @@ function App() {
           <button>Zebra</button>
           <button>Camel</button>
         </div>
-
+        <Parade animalArr={animalArr}></Parade>
       </section>
     </div>
   );
