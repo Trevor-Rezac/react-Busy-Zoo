@@ -1,7 +1,7 @@
 import React from 'react';
 
 export default function Animal({ animal }) {
-  return <div className='animal' style={{ fontSize: '5rem' }}>
+  return <div role={'animal'} className='animal' style={{ fontSize: '5rem' }}>
     {animal === 'monkey' && '🐒'}
     {animal === 'gorilla' && '🦍'}
     {animal === 'tiger' && '🐅'}
