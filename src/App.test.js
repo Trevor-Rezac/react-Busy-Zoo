@@ -21,4 +21,5 @@ test('TEST 1 - button changes sign to open and green or closed and red. TEST 2 -
 
   fireEvent.click(monkeyBtn);
   expect(animal.textContent).toContain('🐒');
+  expect(animal.style.fontSize).toBe('5rem');
 });
