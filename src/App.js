@@ -17,7 +17,7 @@ function App() {
   const [signColor, setSignColor] = useState('red');
   // console.log('||', 'zoo is open', isOpen, 'sign color is', signColor);
 
-  const [animalArr, setAnimalArr] = useState(['monkey', 'giraffe']);
+  const [animalArr, setAnimalArr] = useState(['monkey']);
   // console.log(animalArr);
 
   function handleAddAnimal(animal) {
@@ -52,7 +52,7 @@ function App() {
       <section className='zoo-container' style={{ backgroundImage: `url(${zooBackground})` }}>
         <div className='animal-btn-container'>
           <h3>Add your favorite animals to the zoo parade!</h3>
-          <button onClick={() => handleAddAnimal('monkey')}>Monkey</button>
+          <button role={'monkey-btn'} onClick={() => handleAddAnimal('monkey')}>Monkey</button>
           <button onClick={() => handleAddAnimal('gorilla')}>Gorilla</button>
           <button onClick={() => handleAddAnimal('tiger')}>Tiger</button>
           <button onClick={() => handleAddAnimal('kangaroo')}>Kangaroo</button>

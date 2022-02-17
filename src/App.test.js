@@ -1,7 +1,7 @@
 import { render, screen, fireEvent } from '@testing-library/react';
 import App from './App';
 
-test('button changes sign to open and green or closed and red', () => {
+test('TEST 1 - button changes sign to open and green or closed and red. TEST 2 - button changes text content', () => {
   render(<App />);
   const openBtn = screen.getByRole('open-button');
   const sign = screen.getByRole('sign');
@@ -15,5 +15,10 @@ test('button changes sign to open and green or closed and red', () => {
   expect(sign.style.backgroundColor).toBe('red');
   expect(sign.textContent).toContain('The Zoo is CLOSED!');
 
-  
+  //second test
+  const monkeyBtn = screen.getByRole('monkey-btn');
+  const animal = screen.getByRole('animal');
+
+  fireEvent.click(monkeyBtn);
+  expect(animal.textContent).toContain('🐒');
 });
